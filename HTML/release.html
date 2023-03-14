@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Refresh Page</title>
+</head>
+<body>
+	<h1>Refresh Page</h1>
+	<label for="add-text">Add Text:</label>
+	<input type="text" id="add-text"><br>
+	<label for="delete-text">Delete Text:</label>
+	<input type="text" id="delete-text"><br>
+	<button onclick="proceed()">Proceed</button>
+
+	<script>
+		function proceed() {
+			var addText = document.getElementById("add-text").value;
+			var deleteText = document.getElementById("delete-text").value;
+			window.location.href = "output.html?add=" + addText + "&delete=" + deleteText;
+		}
+	</script>
+</body>
+</html>
+
