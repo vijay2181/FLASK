@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Output Page</title>
+</head>
+<body>
+	<h1>Selected Options:</h1>
+	<p>Add Text: <span id="add-text"></span></p>
+	<p>Delete Text: <span id="delete-text"></span></p>
+
+	<script>
+		var urlParams = new URLSearchParams(window.location.search);
+		document.getElementById("add-text").innerHTML = urlParams.get("add");
+		document.getElementById("delete-text").innerHTML = urlParams.get("delete");
+	</script>
+</body>
+</html>
+
