@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Services</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('services') }}">
+        <h2>Select Services:</h2>
+        {% for service in services %}
+           <input type="checkbox" name="service" value="{{ service }}">{{ service }}<br>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Select">
+    </form>
+</body>
+</html>
