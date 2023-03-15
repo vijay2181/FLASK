@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Options</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('submit') }}">
+        <h2>Enter Options:</h2>
+        {% for service in selected_services %}
+            <h3>{{ service }}</h3>
+            <label>Variable to add:</label> <input type="text" name="{{ service }}_add"><br>
+            <label>Variable to delete:</label> <input type="text" name="{{ service }}_delete"><br>
+        {% endfor %}
+        <br>
+        <input type="submit" name="submit" value="Finish">
+    </form>
+</body>
+</html>
